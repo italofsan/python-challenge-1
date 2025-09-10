@@ -10,7 +10,7 @@ def get_contact_list(contact_list):
       Phone: {phone} \
       E-mail: {email} \
       Favorite: [{is_favorite}]")
-    return
+  return
 
 def add_contact(contact_list):
     name = input("\nType the name of the contact: ")
@@ -51,4 +51,18 @@ def favorite_contact(contact_list):
   contact_list[adjusted_contact_index]["favorite"] = True
   
   print("Contact %s checked as favorite" % contact_list[adjusted_contact_index]["name"])
+  return
+
+def get_favorite_contacts(contact_list):
+  print("\nFavorite Contacts")
+  for index, contact in enumerate(contact_list, start=1):
+    if contact["favorite"]:
+      contact_name = contact["name"]
+      phone = contact["phone"]
+      email = contact["email"] 
+
+      print(f"{index}. {contact_name} \
+        Phone: {phone} \
+        E-mail: {email}")
+      
   return
