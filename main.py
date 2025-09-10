@@ -15,8 +15,7 @@ while True:
     option = input("\nChoose your option: ")
 
     if option == "1":
-        contact_name = input("Type the name of the contact: ")
-        add_contact(contact_list,contact_name)
+        add_contact(contact_list)
 
     if option == "2":
         get_contact_list(contact_list)
