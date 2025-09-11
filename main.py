@@ -1,4 +1,4 @@
-from functions import get_contact_list, add_contact, update_contact, favorite_contact, get_favorite_contacts
+from functions import get_contact_list, add_contact, update_contact, favorite_contact, get_favorite_contacts,remove_contact
 
 contact_list = []
 
@@ -31,6 +31,10 @@ while True:
     if option == "5":
         get_contact_list(contact_list)
         get_favorite_contacts(contact_list)
+
+    if option == "6":
+        get_contact_list(contact_list)
+        remove_contact(contact_list)
 
     if option == "7":
         break

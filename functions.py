@@ -63,6 +63,17 @@ def get_favorite_contacts(contact_list):
 
       print(f"{index}. {contact_name} \
         Phone: {phone} \
-        E-mail: {email}")
-      
+        E-mail: {email}")   
   return
+
+def remove_contact(contact_list):
+  contact_index = input("\nChoose the contact you'd like to remove: ")
+  adjusted_contact_index = int(contact_index) - 1
+
+  if 0 <= adjusted_contact_index < len(contact_list):
+        removed_contact = contact_list.pop(adjusted_contact_index)
+        print(f"\nContact {removed_contact['name']} removed successfully!")
+  else:
+        print("\nInvalid contact index.")
+  return
+  
